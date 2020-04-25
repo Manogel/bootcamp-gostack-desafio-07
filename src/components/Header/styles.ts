@@ -21,6 +21,8 @@ export const Container = styled.div<ContainerProps>`
         color: #fff;
         text-decoration: none;
         font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ff872c;
         transition: opacity 0.2s;
 
         & + a {
