@@ -20,7 +20,6 @@ interface FileProps {
 
 const Import: React.FC = () => {
   const [uploadedFiles, setUploadedFiles] = useState<FileProps[]>([]);
-  const history = useHistory();
 
   function updateProgressFile(id: string, progress: number): void {
     setUploadedFiles(
@@ -42,7 +41,7 @@ const Import: React.FC = () => {
         },
       });
     } catch (err) {
-      console.log(err.response.error);
+      updateProgressFile(upaloadedFile.id, -1);
     }
   }
 
